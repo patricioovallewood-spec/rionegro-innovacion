@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" data-i18n="meta_desc" content="Hub Rionegro — El campus de innovación de Colombia. Del idea al escalamiento, conectamos startups con un ecosistema de alto impacto en el corazón de Rionegro." />
+<meta name="theme-color" content="#163D46" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Hub Rionegro — El campus de innovación de Colombia" />
+<meta property="og:description" content="Propuesta de campus de innovación para conectar el talento de Rionegro con nuevas oportunidades." />
+<meta property="og:locale" content="es_CO" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<title>Hub Rionegro — El campus de innovación de Colombia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  --verde-900:#07505F;--verde-700:#086D7E;--verde:#087F91;--verde-400:#44BFB3;
+  --arena:#EDF6F7;--coral:#087F91;--dorado:#A4E5DC;--mar:#00A9C7;--morado:#317F91;
+  --blanco:#FFFFFF;--tinta:#163D46;--tinta-2:#45616A;--gris:#8A968F;--crema:#F6FAFB;--linea:#D5E6E9;
+  --negro:#0A120F;
+  --font-display:'Fraunces',Georgia,serif;--font-body:'Manrope',system-ui,sans-serif;
+  --fs-300:clamp(0.8125rem,0.79rem + 0.1vw,0.875rem);--fs-400:clamp(0.95rem,0.9rem + 0.2vw,1.0625rem);
+  --fs-500:clamp(1.125rem,1.05rem + 0.4vw,1.375rem);--fs-600:clamp(1.5rem,1.3rem + 0.9vw,2.125rem);
+  --fs-700:clamp(2rem,1.6rem + 1.8vw,3rem);--fs-800:clamp(2.75rem,2rem + 3.5vw,4.5rem);--fs-900:clamp(3.5rem,2.4rem + 6vw,7rem);
+  --sp-1:0.5rem;--sp-2:1rem;--sp-3:1.5rem;--sp-4:2rem;--sp-5:3rem;--sp-6:4rem;--sp-7:6rem;--sp-8:8rem;
+  --container:1300px;--radius-sm:6px;--radius-md:14px;--radius-lg:26px;
+  --shadow-sm:0 2px 10px rgba(15,26,22,.06);--shadow-md:0 16px 40px rgba(15,26,22,.14);
+  --ease:cubic-bezier(.22,.8,.28,1);--dur:280ms;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{margin:0;font-family:var(--font-body);font-size:var(--fs-400);line-height:1.6;color:var(--tinta);background:var(--blanco);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+img,svg{max-width:100%;display:block;}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit;}
+a{color:var(--verde);text-decoration:none;transition:color var(--dur) var(--ease);}
+a:hover{color:var(--verde-900);}
+:focus-visible{outline:3px solid var(--dorado);outline-offset:3px;border-radius:var(--radius-sm);}
+.skip-link{position:absolute;top:-100px;left:var(--sp-2);background:var(--tinta);color:var(--blanco);padding:var(--sp-1) var(--sp-2);border-radius:var(--radius-sm);z-index:1000;transition:top var(--dur) var(--ease);}
+.skip-link:focus{top:var(--sp-2);color:var(--blanco);}
+.container{width:100%;max-width:var(--container);margin-inline:auto;padding-inline:var(--sp-3);}
+h1,h2,h3{font-family:var(--font-display);font-weight:700;line-height:1.05;letter-spacing:-0.02em;color:var(--tinta);margin:0 0 var(--sp-3);}
+h1{font-size:var(--fs-900);}h2{font-size:var(--fs-800);}h3{font-size:var(--fs-600);}
+h4{font-family:var(--font-body);font-weight:700;font-size:var(--fs-500);margin:0 0 var(--sp-2);line-height:1.2;}
+p{margin:0 0 var(--sp-2);color:var(--tinta-2);max-width:64ch;}
+.eyebrow{display:inline-flex;align-items:center;gap:var(--sp-1);font-size:var(--fs-300);font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--verde);margin-bottom:var(--sp-3);}
+.eyebrow::before{content:'';width:26px;height:2px;background:var(--verde);}
+.iso{width:38px;height:38px;flex-shrink:0;}
+.beta-badge{display:inline-block;font-size:0.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--dorado);color:var(--tinta);padding:3px 8px;border-radius:5px;vertical-align:middle;margin-left:8px;}
+
+.site-header{position:sticky;top:0;z-index:100;background:rgba(10,18,15,.85);backdrop-filter:saturate(180%) blur(16px);-webkit-backdrop-filter:saturate(180%) blur(16px);border-bottom:1px solid rgba(255,255,255,.1);}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-3);padding:var(--sp-2) 0;}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;color:#fff;font-size:1.3rem;letter-spacing:-0.02em;}
+.brand .mf{color:var(--dorado);}
+.nav-list{display:flex;gap:var(--sp-1);list-style:none;margin:0;padding:0;}
+.nav-list a{color:rgba(255,255,255,.82);font-weight:600;font-size:var(--fs-400);padding:8px 13px;border-radius:var(--radius-sm);transition:all var(--dur) var(--ease);}
+.nav-list a:hover{color:#fff;background:rgba(255,255,255,.1);}
+.nav-actions{display:flex;align-items:center;gap:var(--sp-2);}
+.lang-toggle{display:inline-flex;align-items:center;background:rgba(255,255,255,.1);border-radius:999px;padding:3px;font-weight:700;font-size:var(--fs-300);}
+.lang-toggle button{padding:6px 12px;border-radius:999px;color:rgba(255,255,255,.7);transition:all var(--dur) var(--ease);}
+.lang-toggle button.active{background:var(--dorado);color:var(--tinta);}
+.nav-cta{background:var(--coral);color:#fff;padding:10px 22px;border-radius:999px;font-weight:700;font-size:var(--fs-300);white-space:nowrap;transition:all var(--dur) var(--ease);}
+.nav-cta:hover{background:#fff;color:var(--tinta);transform:translateY(-1px);}
+.menu-toggle{display:none;width:44px;height:44px;border-radius:var(--radius-sm);align-items:center;justify-content:center;}
+.menu-toggle span{width:22px;height:2px;background:#fff;position:relative;}
+.menu-toggle span::before,.menu-toggle span::after{content:'';position:absolute;left:0;width:22px;height:2px;background:#fff;}
+.menu-toggle span::before{top:-7px;}.menu-toggle span::after{top:7px;}
+@media (max-width:980px){.menu-toggle{display:inline-flex;}.nav-list{display:none;}.nav-list.is-open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--negro);padding:var(--sp-3);border-bottom:1px solid rgba(255,255,255,.1);box-shadow:var(--shadow-md);gap:var(--sp-1);}.nav-cta{display:none;}}
+
+/* HERO oscuro con imagen de campus simulada */
+.hero{position:relative;overflow:hidden;color:#fff;padding:var(--sp-8) 0;isolation:isolate;min-height:78vh;display:flex;align-items:center;}
+.hero::before{content:'';position:absolute;inset:0;z-index:-2;background:linear-gradient(135deg,var(--negro) 0%,var(--verde-900) 70%,var(--verde-700) 130%);}
+.hero::after{content:'';position:absolute;inset:0;z-index:-1;opacity:.5;background-image:radial-gradient(circle at 78% 30%,rgba(232,176,75,.28),transparent 45%),linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:100% 100%,54px 54px,54px 54px;}
+.hero h1{color:#fff;max-width:15ch;font-size:var(--fs-900);margin-bottom:var(--sp-3);}
+.hero h1 .accent{color:var(--dorado);}
+.hero .eyebrow{color:var(--dorado);}.hero .eyebrow::before{background:var(--dorado);}
+.hero p.lead{color:rgba(255,255,255,.85);font-size:var(--fs-500);max-width:54ch;margin-bottom:var(--sp-4);}
+.hero-actions{display:flex;gap:var(--sp-2);flex-wrap:wrap;margin-bottom:var(--sp-6);}
+.btn{display:inline-flex;align-items:center;gap:var(--sp-1);padding:15px 32px;border-radius:999px;font-weight:700;font-size:var(--fs-400);transition:all var(--dur) var(--ease);cursor:pointer;border:2px solid transparent;}
+.btn-primary{background:var(--coral);color:#fff;}
+.btn-primary:hover{background:#fff;color:var(--tinta);transform:translateY(-2px);box-shadow:var(--shadow-md);}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4);}
+.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff;color:#fff;}
+.btn-dark{background:var(--verde);color:#fff;}
+.btn-dark:hover{background:var(--verde-900);color:#fff;transform:translateY(-2px);}
+.hero-stats{display:flex;gap:var(--sp-6);flex-wrap:wrap;}
+.hero-stat .n{font-family:var(--font-display);font-weight:700;font-size:var(--fs-700);color:#fff;line-height:1;display:block;}
+.hero-stat .n em{color:var(--dorado);font-style:normal;}
+.hero-stat p{color:rgba(255,255,255,.7);font-size:var(--fs-300);margin:6px 0 0;}
+
+section{padding:var(--sp-7) 0;}
+.section-head{max-width:780px;margin-bottom:var(--sp-4);}
+.bg-crema{background:var(--crema);}
+.bg-negro{background:var(--negro);color:#fff;}
+.bg-negro h2,.bg-negro h3{color:#fff;}.bg-negro p{color:rgba(255,255,255,.75);}
+.bg-negro .eyebrow{color:var(--dorado);}.bg-negro .eyebrow::before{background:var(--dorado);}
+.head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--sp-3);flex-wrap:wrap;margin-bottom:var(--sp-4);}
+
+/* Historia / cabina */
+.historia{display:grid;grid-template-columns:1.1fr 1fr;gap:var(--sp-5);align-items:center;}
+.historia-visual{aspect-ratio:4/3;border-radius:var(--radius-lg);background:linear-gradient(135deg,var(--verde-900),var(--mar));position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.historia-visual::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:30px 30px;}
+.historia-visual .yr{position:relative;font-family:var(--font-display);font-weight:700;font-size:clamp(3rem,10vw,6rem);color:#fff;letter-spacing:-0.03em;}
+.historia-visual .yr span{color:var(--dorado);}
+@media (max-width:860px){.historia{grid-template-columns:1fr;gap:var(--sp-3);}}
+
+/* Startups grid */
+.logos{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:var(--sp-2);margin-top:var(--sp-4);}
+.logo-card{aspect-ratio:3/2;border:1px solid var(--linea);border-radius:var(--radius-md);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:var(--blanco);transition:all var(--dur) var(--ease);padding:var(--sp-2);text-align:center;}
+.logo-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--verde);}
+.logo-card .nm{font-family:var(--font-display);font-weight:700;font-size:var(--fs-400);color:var(--tinta);}
+.logo-card .tag{font-size:0.7rem;color:var(--gris);text-transform:uppercase;letter-spacing:.05em;}
+
+/* Programas */
+.progs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--sp-3);margin-top:var(--sp-4);}
+.prog{border-radius:var(--radius-lg);padding:var(--sp-4);color:#fff;min-height:220px;display:flex;flex-direction:column;justify-content:space-between;transition:transform var(--dur) var(--ease);position:relative;overflow:hidden;}
+.prog:hover{transform:translateY(-6px);}
+.prog .k{font-size:var(--fs-300);text-transform:uppercase;letter-spacing:.1em;opacity:.85;}
+.prog h3{color:#fff;font-size:var(--fs-500);margin:var(--sp-2) 0;}
+.prog p{color:rgba(255,255,255,.85);font-size:var(--fs-300);margin:0;}
+.prog.p1{background:linear-gradient(160deg,var(--verde-700),var(--verde));}
+.prog.p2{background:linear-gradient(160deg,#8f2f1f,var(--coral));}
+.prog.p3{background:linear-gradient(160deg,#083f52,var(--mar));}
+.prog.p4{background:linear-gradient(160deg,#2f2247,var(--morado));}
+.prog.p5{background:linear-gradient(160deg,var(--verde-900),var(--verde-700));}
+.prog.p6{background:linear-gradient(160deg,#9a7415,var(--dorado));color:var(--tinta);}
+.prog.p6 h3,.prog.p6 p{color:var(--tinta);}.prog.p6 p{opacity:.8;}
+
+/* Beneficios */
+.benes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--sp-3);margin-top:var(--sp-4);}
+.bene{padding:var(--sp-4);border:1px solid var(--linea);border-radius:var(--radius-md);background:var(--blanco);transition:all var(--dur) var(--ease);}
+.bene:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--verde);}
+.bene .ic{width:52px;height:52px;border-radius:var(--radius-sm);background:var(--verde-900);color:var(--dorado);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:var(--fs-500);margin-bottom:var(--sp-3);}
+.bene h4{margin-bottom:var(--sp-1);}.bene p{margin:0;font-size:var(--fs-400);}
+
+/* Partners */
+.partners{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:var(--sp-2);margin-top:var(--sp-4);}
+.partner{aspect-ratio:2/1;border:1px solid var(--linea);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;background:var(--blanco);font-family:var(--font-display);font-weight:700;color:var(--tinta-2);font-size:var(--fs-400);text-align:center;padding:var(--sp-1);transition:all var(--dur) var(--ease);}
+.partner:hover{border-color:var(--verde);color:var(--verde-900);transform:translateY(-2px);}
+
+/* Noticias */
+.stories{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--sp-3);margin-top:var(--sp-4);}
+.story{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radius-md);overflow:hidden;display:flex;flex-direction:column;transition:all var(--dur) var(--ease);}
+.story:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.story-img{aspect-ratio:16/9;background:linear-gradient(135deg,var(--verde),var(--mar));}
+.story:nth-child(3n+2) .story-img{background:linear-gradient(135deg,var(--coral),var(--dorado));}
+.story:nth-child(3n+3) .story-img{background:linear-gradient(135deg,var(--morado),var(--verde-700));}
+.story-body{padding:var(--sp-3);flex:1;}
+.story-body .date{font-weight:700;font-size:var(--fs-300);color:var(--coral);text-transform:uppercase;letter-spacing:.05em;}
+.story-body h4{font-size:var(--fs-400);margin:var(--sp-1) 0 0;line-height:1.3;}
+
+.cta{padding:var(--sp-8) 0;background:var(--dorado);color:var(--tinta);text-align:center;}
+.cta h2{color:var(--tinta);max-width:20ch;margin-inline:auto;}
+.cta p{color:var(--tinta);opacity:.85;font-size:var(--fs-500);margin:0 auto var(--sp-4);max-width:50ch;}
+
+.site-footer{background:var(--negro);color:rgba(255,255,255,.72);padding:var(--sp-6) 0 var(--sp-3);font-size:var(--fs-300);}
+.footer-top{display:flex;justify-content:space-between;gap:var(--sp-4);flex-wrap:wrap;margin-bottom:var(--sp-4);}
+.footer-brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:var(--fs-600);color:#fff;}
+.footer-brand .mf{color:var(--dorado);}
+.footer-cols{display:grid;grid-template-columns:repeat(4,auto);gap:var(--sp-5);}
+.site-footer h5{color:#fff;text-transform:uppercase;letter-spacing:.1em;font-size:var(--fs-300);margin:0 0 var(--sp-2);font-weight:700;}
+.site-footer ul{list-style:none;padding:0;margin:0;}.site-footer li{margin-bottom:var(--sp-1);}
+.site-footer a{color:rgba(255,255,255,.72);}.site-footer a:hover{color:var(--dorado);}
+.footer-bottom{padding-top:var(--sp-3);border-top:1px solid rgba(255,255,255,.15);display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--sp-2);}
+@media (max-width:760px){.footer-cols{grid-template-columns:1fr 1fr;gap:var(--sp-3);}}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 600ms var(--ease),transform 600ms var(--ease);}
+.reveal.is-visible{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+.lead-narrow{max-width:680px;}
+</style>
+<style>
+/* Orientador de innovación */
+.mf-guide{--guide-color:#07505F;scroll-margin-top:150px;margin:32px auto;padding:0;max-width:1180px;font-family:Manrope,system-ui,sans-serif;color:#163D46;font-size:16px;line-height:1.6}
+.mf-guide *{box-sizing:border-box}.mf-guide-shell{border:1px solid #d7e4de;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 12px 36px #07505f0c}.mf-guide-head{padding:28px 32px;background:var(--guide-color);color:#fff}.mf-guide-head h2{font-size:clamp(25px,3vw,36px);color:#fff;margin:8px 0 12px;line-height:1.15}.mf-guide-head p{color:#fff;margin:0;font-size:16px;max-width:65ch}.mf-guide-tag{color:#ffe1a4;font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.mf-guide-body{padding:28px 32px}.mf-guide .mf-guide-context{background:#f1f6f3;border-radius:12px;padding:12px 16px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:22px;color:#29483a;font-size:14px}.mf-guide button,.mf-guide a{font:inherit}.mf-guide button:focus-visible,.mf-guide a:focus-visible{outline:3px solid #b97910;outline-offset:4px}.mf-guide-progress{display:flex;align-items:center;gap:16px;margin-bottom:24px;font-size:14px;color:#45616A}.mf-guide-track{flex:1;height:6px;background:#e8eeeb;border-radius:99px;overflow:hidden}.mf-guide-fill{height:100%;background:var(--guide-color)}.mf-guide fieldset{border:0;margin:0;padding:0;min-width:0}.mf-guide legend{font-weight:800;font-size:22px;line-height:1.35;margin-bottom:10px;width:100%}.mf-guide-help{font-size:15px;color:#45616A;margin:0 0 20px}.mf-guide-options{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mf-guide-option{display:flex;align-items:flex-start;gap:12px;padding:17px;border:1px solid #cddbd3;border-radius:12px;cursor:pointer;background:#fff;line-height:1.4}.mf-guide-option:has(input:checked){border-color:var(--guide-color);background:#eef7f2;box-shadow:inset 0 0 0 1px var(--guide-color)}.mf-guide-option:hover{border-color:var(--guide-color)}.mf-guide-option input{flex-shrink:0;margin:4px 0 0;width:18px;height:18px;accent-color:var(--guide-color)}.mf-guide-option strong{font-size:16px;font-weight:700;display:block}.mf-guide-option small{display:block;color:#45616A;font-size:14px;margin-top:6px}.mf-guide-actions{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:24px}.mf-guide .mf-guide-button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border:1px solid var(--guide-color);border-radius:99px;text-decoration:none;background:var(--guide-color);color:#fff;font-weight:700;cursor:pointer}.mf-guide .mf-guide-button.secondary{background:#fff;color:var(--guide-color)}.mf-guide .mf-guide-button:disabled{opacity:.4;cursor:not-allowed}.mf-guide .mf-guide-link{color:var(--guide-color);text-decoration:underline;background:none;border:0;padding:4px;cursor:pointer;font-size:14px}.mf-guide-result h3{color:var(--guide-color);font-size:30px;margin:8px 0 16px;line-height:1.2}.mf-guide-result p{font-size:16px;color:#45616A}.mf-guide-label{font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--guide-color)}.mf-guide-summary{padding:16px;background:#f1f6f3;border-radius:12px;margin:20px 0}.mf-guide-summary ul{margin:8px 0;padding-left:20px}.mf-guide-alt{border-top:1px solid #d7e4de;padding-top:18px;margin-top:22px}.mf-guide-note{font-size:14px!important;color:#52675c!important;margin:20px 0 0!important}.mf-guide-highlight{outline:3px solid #b97910;outline-offset:6px;scroll-margin-top:120px}.mf-guide-noscript{padding:20px}
+@media(max-width:640px){.mf-guide-head,.mf-guide-body{padding:22px 18px}.mf-guide-options{grid-template-columns:1fr}.mf-guide{margin:22px auto}.mf-guide-actions .mf-guide-button{flex:1}.mf-guide legend{font-size:20px}}
+</style>
+<style>
+/* Portal, fichas y constructor de retos */
+:root{--mf-accent:#07505F}
+:root{--mf-accent:#07505F}.mf-portal{padding:40px 0 48px;background:#F0F8F9}.mf-portal-grid{display:grid;grid-template-columns:minmax(250px,.75fr) minmax(0,1.4fr);gap:42px;align-items:start}.mf-portal-intro{padding-top:30px}.mf-portal h1{font-size:clamp(36px,4vw,56px);max-width:12ch;line-height:1.06}.mf-portal-intro>p{font-size:18px;color:#45616A;margin-bottom:28px}.mf-portal .mf-guide{margin:0;max-width:100%}.mf-portal .mf-guide-head{padding:22px 26px}.mf-portal .mf-guide-head h2{font-size:28px}.mf-portal .mf-guide-body{padding:24px 26px}.mf-portal .mf-guide legend{font-size:20px}.mf-portal-links{display:flex;gap:12px;flex-wrap:wrap}.mf-portal-links a{font-weight:700;color:#07505F;border-bottom:1px solid #abc4b7;padding-bottom:5px}.mf-portal-path{margin-top:36px;border-top:1px solid #ccddd3;padding-top:24px}.mf-portal-path span{display:block;font-size:14px;font-weight:800;color:#52675c;margin:0 0 12px}.mf-portal-path p{font-size:16px;margin:0}.mf-crossnav{background:#fff;border-bottom:1px solid #d7e4de}.mf-crossnav>div{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}.mf-crossnav strong{font-size:14px;color:var(--mf-accent)}.mf-crossnav nav{display:flex;flex-wrap:wrap;gap:18px}.mf-crossnav a{font-size:14px;font-weight:700;color:var(--mf-accent);text-decoration:underline;text-underline-offset:4px}.mf-details{font-size:15px;line-height:1.5;margin:20px 0 0;padding:0;border-top:1px solid currentColor}.mf-details div{padding-top:12px}.mf-details dt{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;opacity:.85}.mf-details dd{margin:4px 0 0;max-width:60ch}.mf-details dd a{color:inherit;text-decoration:underline;font-weight:700}.mf-details-light{color:#fff}.mf-details-dark{color:#163D46}.mf-program-cta{display:inline-block;font-weight:700;margin-top:18px;color:inherit;text-decoration:underline;text-underline-offset:4px}.servicio:has(.mf-details),.prog:has(.mf-details){justify-content:flex-start}.mf-builder{scroll-margin-top:160px;padding:48px 0}.mf-builder-shell{background:#f5f8f6;border:1px solid #d7e4de;border-radius:24px;padding:32px;color:#163D46}.mf-builder h2{font-size:clamp(28px,3vw,38px);color:#163D46;margin-bottom:14px}.mf-builder p{font-size:16px;color:#45616A}.mf-builder-intro{max-width:68ch}.mf-builder summary{cursor:pointer;font-size:17px;font-weight:800;color:var(--mf-accent);padding:16px 0}.mf-builder-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:32px;margin-top:20px;align-items:start}.mf-builder-field{margin-bottom:22px}.mf-builder label{display:block;font-size:16px;font-weight:700;color:#163D46;margin-bottom:8px}.mf-builder input,.mf-builder textarea,.mf-builder select{display:block;width:100%;max-width:100%;font:inherit;font-size:16px;line-height:1.5;border:1px solid #b3cabc;border-radius:10px;background:#fff;padding:12px;color:#163D46}.mf-builder textarea{min-height:108px;resize:vertical}.mf-builder input:focus,.mf-builder textarea:focus,.mf-builder select:focus{outline:3px solid #A4E5DC;outline-offset:2px}.mf-builder-hint{font-size:14px!important;line-height:1.5;margin:6px 0 0!important;color:#52675c!important}.mf-builder-preview{background:#fff;border:1px solid #d7e4de;border-top:4px solid var(--mf-accent);padding:24px;border-radius:14px;overflow-wrap:anywhere}.mf-builder-preview h3{font-size:24px;line-height:1.2;color:#163D46}.mf-builder-preview h4{font:700 15px Manrope,system-ui,sans-serif;margin:22px 0 6px}.mf-builder-preview p{white-space:pre-wrap;font-size:15px;line-height:1.6}.mf-builder-preview .empty{color:#73857a;font-style:italic}.mf-builder-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.mf-builder button,.mf-builder .mf-action{font:700 15px Manrope,system-ui,sans-serif;cursor:pointer;min-height:46px;border-radius:99px;padding:10px 18px;border:1px solid var(--mf-accent);background:var(--mf-accent);color:#fff;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}.mf-builder button.secondary{background:#fff;color:var(--mf-accent)}.mf-builder button:disabled{opacity:.4;cursor:not-allowed}.mf-builder button:focus-visible,.mf-crossnav a:focus-visible{outline:3px solid #b97910;outline-offset:4px}.mf-builder-status{font-size:14px!important;min-height:22px;margin-top:12px}.mf-builder-meta{font-size:14px!important;margin-top:22px}.mf-builder .mf-draft-choice{margin:0 0 20px}.mf-institutional h1{font-size:clamp(30px,3vw,44px)}
+@media(max-width:900px){.mf-portal-grid{grid-template-columns:1fr;gap:22px}.mf-portal-intro{padding-top:0}.mf-portal h1{max-width:19ch}.mf-portal-intro>p{margin-bottom:18px}.mf-portal-path{display:none}.mf-builder-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.mf-portal{padding:28px 0}.mf-portal .container{padding-inline:16px}.mf-builder-shell{padding:22px 16px}.mf-builder{padding:32px 0}.mf-crossnav nav{gap:14px}.mf-crossnav strong{width:100%}.mf-builder-preview{padding:18px}.mf-builder-actions button{flex:1}.mf-details{font-size:15px}.mf-portal .mf-guide-head,.mf-portal .mf-guide-body{padding:20px 18px}}
+</style>
+<style>
+.mf-guide,.mf-builder{scroll-margin-top:var(--mf-anchor-offset,150px)}.registro-bar{top:var(--mf-header-height,60px)}
+@media(max-width:600px){.mf-portal{padding-top:20px}.mf-portal h1{font-size:32px;margin-bottom:12px}.mf-portal-intro>.eyebrow{margin-bottom:12px}.mf-portal-intro>p{font-size:16px;line-height:1.5}.mf-portal-links{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mf-portal-links a{font-size:14px}.mf-portal .mf-guide.container{padding-inline:0}.mf-portal .mf-guide-head p{display:none}.mf-portal .mf-guide-head h2{font-size:24px;margin-bottom:0}}
+</style>
+<style>.rn-official-logo{display:block;width:170px;height:auto;max-height:52px;object-fit:contain;background:#fff;border-radius:5px;padding:5px;flex-shrink:0}.brand{gap:14px}.brand b{font-size:1rem}.rn-proposal{background:#EDF8FA;color:#07505F;border-bottom:1px solid #C9E6EB;padding:8px 20px;text-align:center;font:600 12px/1.5 Manrope,system-ui,sans-serif}.rn-proposal a{color:inherit;text-decoration:underline}.rn-home{display:inline-block;margin:10px 0;color:inherit;text-decoration:underline}.footer-brand{flex-wrap:wrap}.reveal{opacity:1;transform:none}@media(max-width:650px){.rn-official-logo{width:118px;max-height:43px}.brand b{font-size:.85rem}.brand small{font-size:.63rem}.nav{gap:10px}.rn-proposal{font-size:11px;padding:7px 12px}}@media print{.rn-proposal{display:block}.rn-official-logo{width:150px}}</style><link rel="stylesheet" href="./rionegro-institucional.css">
+</head>
+<body><div class="rn-proposal">PROPUESTA PARA RIONEGRO · Documento de trabajo de Patricio Ovalle Wood. Programas, cifras y casos ilustrativos sujetos a validación municipal. <a href="./index.html#top">Ver propuesta integral →</a></div>
+<a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="iso-mf" viewBox="0 0 100 100"><circle cx="50" cy="34" r="16" fill="var(--dorado)"/><path d="M6,64 Q28,48 50,64 T94,64" fill="none" stroke="var(--verde-400)" stroke-width="7" stroke-linecap="round"/><path d="M6,80 Q28,64 50,80 T94,80" fill="none" stroke="var(--mar)" stroke-width="7" stroke-linecap="round"/></symbol></svg>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="#top" class="brand" aria-label="Hub Rionegro">
+      <img class="rn-official-logo" src="./logo-rionegro.png" alt="Logo oficial de la Alcaldía de Rionegro">
+      Hub <span class="mf">Rionegro</span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <ul class="nav-list" id="nav-list">
+        <li><a href="#startups" data-i18n="nav_startups">Startups</a></li>
+        <li><a href="#programas" data-i18n="nav_programs">Programas</a></li>
+        <li><a href="#campus" data-i18n="nav_campus">El Campus</a></li>
+        <li><a href="#historia" data-i18n="nav_history">Visión</a></li>
+        <li><a href="#noticias" data-i18n="nav_news">Noticias</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-toggle" role="group" aria-label="Idioma"><button data-lang-btn="es" class="active" aria-pressed="true">ES</button><button data-lang-btn="en" aria-pressed="false">EN</button></div>
+      <a class="nav-cta" href="#contacto" data-i18n="nav_cta">Postular</a>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-list"><span></span></button>
+    </div>
+  </div>
+</header><div class="mf-crossnav"><div class="container"><strong>Innovación Rionegro · Hub</strong><nav aria-label="Recorrido de innovación"><a href="./index.html#lineas">Todas las líneas</a><a href="#mf-orientador">Tu orientación</a><a href="#mf-reto" data-build-reto>Construye tu reto</a></nav></div></div>
+
+<aside class="rn-wellbeing" aria-label="Visión de ciudad"><div class="container"><strong>Rionegro · <span class="rn-es">Ciudad del Bienestar</span><span class="rn-en">City of Wellbeing</span></strong><span class="rn-es">Innovación al servicio de las personas y sus familias</span><span class="rn-en">Innovation serving people and their families</span></div></aside>
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="container">
+    <span class="eyebrow" data-i18n="h_eyebrow">Rionegro · Antioquia · Colombia</span>
+    <h1 data-i18n="h_title">El campus de innovación <span class="accent">de Rionegro</span>.</h1><div class="rn-impact"><strong class="rn-es">Más oportunidades para las familias.</strong><strong class="rn-en">More opportunities for families.</strong><p class="rn-es">Conectar emprendedores, empresas y universidades permite desarrollar capacidades, fortalecer negocios y abrir oportunidades de empleo e ingresos en el territorio.</p><p class="rn-en">Connecting entrepreneurs, businesses and universities builds capabilities, strengthens businesses and opens local employment and income opportunities.</p></div>
+    <p class="lead" data-i18n="h_lead">Una propuesta para conectar a los emprendedores de Rionegro con conocimiento, talento y oportunidades. De la idea al escalamiento, articulamos un ecosistema con vocación regional e internacional.</p>
+    <div class="hero-actions"><a class="btn btn-ghost" href="#mf-orientador">Encuentra tu programa</a>
+      <a class="btn btn-primary" href="#programas" data-i18n="h_cta1">Postula a un programa</a>
+      <a class="btn btn-ghost" href="#historia" data-i18n="h_cta2">Conoce la visión</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="n">150<em>+</em></span><p data-i18n="h_s1">startups · meta ilustrativa</p></div>
+      <div class="hero-stat"><span class="n">8</span><p data-i18n="h_s2">programas por desarrollar</p></div>
+      <div class="hero-stat"><span class="n">40</span><p data-i18n="h_s3">aliados · meta ilustrativa</p></div>
+      <div class="hero-stat"><span class="n">4</span><p data-i18n="h_s4">líneas articuladas</p></div>
+    </div>
+  </div>
+</section>
+<section class="container mf-guide" id="mf-orientador" data-line="hub" aria-label="Orientador de innovación"><noscript><p class="mf-guide-noscript">Activa JavaScript para utilizar el orientador. También puedes explorar las opciones descritas en esta página.</p></noscript></section><section class="mf-builder" id="mf-reto" aria-labelledby="mf-reto-title"><div class="container"><div class="mf-builder-shell"><span class="eyebrow">De la orientación a la acción</span><h2 id="mf-reto-title">Construye tu reto.</h2><p class="mf-builder-intro">Ordena tu necesidad en cinco preguntas. Obtén una ficha con el problema, la orientación elegida y los pasos para preparar una conversación con el equipo municipal.</p><details id="mf-builder-open"><summary>Comenzar mi ficha</summary><div class="mf-builder-grid"><form id="mf-builder-form"><div class="mf-builder-field"><label for="mf-title">Título de tu reto</label><input id="mf-title" name="title" maxlength="150" placeholder="Un nombre breve para tu reto"><p class="mf-builder-hint">Opcional. Puedes completarlo al terminar.</p></div><div class="mf-builder-field"><label for="mf-problem">1. ¿Qué problema quieres resolver?</label><textarea id="mf-problem" name="problem" maxlength="3000" placeholder="Ej.: Los vecinos deben consultar varias veces el estado de un trámite." aria-describedby="mf-hint-problem"></textarea><p id="mf-hint-problem" class="mf-builder-hint">Describe lo que ocurre hoy. Evita empezar por una solución.</p></div><div class="mf-builder-field"><label for="mf-people">2. ¿A quién afecta y cómo?</label><textarea id="mf-people" name="people" maxlength="3000" placeholder="Ej.: Vecinos y comercios que pierden tiempo en visitas y consultas." aria-describedby="mf-hint-people"></textarea><p id="mf-hint-people" class="mf-builder-hint">Identifica a las personas, el lugar y la dificultad que enfrentan.</p></div><div class="mf-builder-field"><label for="mf-attempts">3. ¿Qué has intentado hasta ahora?</label><textarea id="mf-attempts" name="attempts" maxlength="3000" placeholder="Ej.: Revisamos consultas frecuentes y conversamos con usuarios." aria-describedby="mf-hint-attempts"></textarea><p id="mf-hint-attempts" class="mf-builder-hint">Resume acciones, aprendizajes o evidencia. Si aún no has actuado, indícalo.</p></div><div class="mf-builder-field"><label for="mf-change">4. ¿Qué cambio concreto esperas lograr?</label><textarea id="mf-change" name="change" maxlength="3000" placeholder="Ej.: Reducir consultas repetidas y mejorar la claridad de la información." aria-describedby="mf-hint-change"></textarea><p id="mf-hint-change" class="mf-builder-hint">Describe un resultado observable. Puedes incluir un indicador sin inventar una meta.</p></div><div class="mf-builder-field"><label for="mf-resources">5. ¿Qué recursos, información o aliados tienes?</label><textarea id="mf-resources" name="resources" maxlength="3000" placeholder="Ej.: Un equipo de atención, registros de consultas y vecinos interesados." aria-describedby="mf-hint-resources"></textarea><p id="mf-hint-resources" class="mf-builder-hint">Incluye equipo, datos, espacios o posibles colaboradores; también lo que te falta.</p></div></form><div><div class="mf-draft-choice"><label for="mf-draft-line">Línea de trabajo</label><select id="mf-draft-line"><option value="">Aún por definir</option><option value="lab">Lab Rionegro</option><option value="sandbox">Sandbox Rionegro</option><option value="hub">Hub Rionegro</option><option value="invest">Invest Rionegro</option></select><p class="mf-builder-hint">Se completa con tu orientación. Puedes cambiarla para explorar otra vía.</p></div><article class="mf-builder-preview" id="mf-preview" aria-label="Vista previa de tu ficha"></article><p class="mf-builder-hint">Completa el problema, las personas afectadas y el cambio esperado para descargar.</p><div class="mf-builder-actions"><button type="button" id="mf-download" disabled>Descargar ficha</button><button type="button" id="mf-download-text" class="secondary" disabled>Versión de texto</button><button type="button" id="mf-clear" class="secondary">Borrar borrador</button></div><p class="mf-builder-status" id="mf-builder-status" role="status" aria-live="polite"></p><p class="mf-builder-meta">Tu borrador se guarda en este navegador. No se envía a la alcaldía. La ficha descargable se puede imprimir o guardar como PDF desde el navegador.</p></div></div></details></div></div></section>
+
+<!-- STARTUPS -->
+<section id="startups">
+  <div class="container">
+    <div class="head-row reveal">
+      <div><span class="eyebrow" data-i18n="st_eyebrow">Hecho en el Hub</span><h2 data-i18n="st_title">Startups que nacen acá.</h2></div>
+      <a class="btn btn-dark" href="#contacto" data-i18n="st_cta">Ver todas</a>
+    </div>
+    <p class="reveal" style="color:var(--gris);font-size:var(--fs-300);" data-i18n="st_note">Startups de ejemplo para la maqueta. Se reemplazarán con las residentes reales del Hub.</p>
+    <div class="logos reveal">
+      <div class="logo-card"><span class="nm">AndesPay</span><span class="tag" data-i18n="st_1">Fintech</span></div>
+      <div class="logo-card"><span class="nm">RutaViva</span><span class="tag" data-i18n="st_2">Movilidad</span></div>
+      <div class="logo-card"><span class="nm">Sabor IA</span><span class="tag" data-i18n="st_3">Foodtech</span></div>
+      <div class="logo-card"><span class="nm">TuristIA</span><span class="tag" data-i18n="st_4">Turismo</span></div>
+      <div class="logo-card"><span class="nm">VerdeLab</span><span class="tag" data-i18n="st_5">Cleantech</span></div>
+      <div class="logo-card"><span class="nm">SaludCerca</span><span class="tag" data-i18n="st_6">Healthtech</span></div>
+      <div class="logo-card"><span class="nm">EduOriente</span><span class="tag" data-i18n="st_7">Edtech</span></div>
+      <div class="logo-card"><span class="nm">CasApp</span><span class="tag" data-i18n="st_8">Proptech</span></div>
+      <div class="logo-card"><span class="nm">GobiernoYa</span><span class="tag" data-i18n="st_9">GovTech</span></div>
+      <div class="logo-card"><span class="nm">AgroConecta</span><span class="tag" data-i18n="st_10">Agrotech</span></div>
+      <div class="logo-card"><span class="nm">CreaOriente</span><span class="tag" data-i18n="st_11">Economía creativa</span></div>
+      <div class="logo-card"><span class="nm">DataMunicipio</span><span class="tag" data-i18n="st_12">Data / IA</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMAS -->
+<section class="bg-crema" id="programas">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow" data-i18n="pr_eyebrow">Programas</span><h2 data-i18n="pr_title">Un programa para cada etapa.</h2><p data-i18n="pr_lead">Del primer prototipo al escalamiento regional, el Hub ofrece rutas de acompañamiento junto a aliados de primer nivel.</p></div>
+    <div class="progs">
+      <article id="programa-cabina" class="prog p1 reveal"><div><span class="k" data-i18n="pr_1_k">Idea</span><h3 data-i18n="pr_1_t">Semilla</h3><p data-i18n="pr_1_d">Preincubación para quienes recién empiezan: el primer paso para convertir una idea en un proyecto validado.</p></div><dl class="mf-details mf-details-light"><div><dt>Para quién es</dt><dd>Personas y equipos con una idea de emprendimiento.</dd></div><div><dt>Qué apoyo ofrece</dt><dd>Preincubación para dar forma y validar el proyecto.</dd></div><div><dt>Qué necesitas para comenzar</dt><dd>Describe el problema, tus posibles usuarios y la idea inicial.</dd></div><div><dt>Siguiente paso</dt><dd><a href="#mf-reto" data-build-reto>Preparar mi ficha de reto</a></dd></div></dl></article>
+      <article id="programa-malecon" class="prog p2 reveal"><div><span class="k" data-i18n="pr_2_k">Tracción</span><h3 data-i18n="pr_2_t">Impulso</h3><p data-i18n="pr_2_d">Aceleración para startups con producto y primeros clientes.</p></div><dl class="mf-details mf-details-light"><div><dt>Para quién es</dt><dd>Startups con producto y primeros clientes.</dd></div><div><dt>Qué apoyo ofrece</dt><dd>Aceleración para fortalecer la tracción del negocio.</dd></div><div><dt>Qué necesitas para comenzar</dt><dd>Reúne evidencia del producto, clientes y dificultades para crecer.</dd></div><div><dt>Siguiente paso</dt><dd><a href="#mf-reto" data-build-reto>Preparar mi ficha de reto</a></dd></div></dl></article>
+      <article id="programa-pacifico" class="prog p3 reveal"><div><span class="k" data-i18n="pr_3_k">Escala</span><h3 data-i18n="pr_3_t">Global</h3><p data-i18n="pr_3_d">Escalamiento regional para startups listas para cruzar fronteras.</p></div><dl class="mf-details mf-details-light"><div><dt>Para quién es</dt><dd>Startups preparadas para expandirse a otros mercados.</dd></div><div><dt>Qué apoyo ofrece</dt><dd>Acompañamiento para el escalamiento regional.</dd></div><div><dt>Qué necesitas para comenzar</dt><dd>Describe tu tracción y los mercados a los que quieres llegar.</dd></div><div><dt>Siguiente paso</dt><dd><a href="#mf-reto" data-build-reto>Preparar mi ficha de reto</a></dd></div></dl></article>
+      <article id="programa-municipio" class="prog p4 reveal"><div><span class="k" data-i18n="pr_4_k">GovTech</span><h3 data-i18n="pr_4_t">Municipio</h3><p data-i18n="pr_4_d">Programa para soluciones que mejoran los servicios de la ciudad.</p></div><dl class="mf-details mf-details-light"><div><dt>Para quién es</dt><dd>Equipos con soluciones para los servicios de la ciudad.</dd></div><div><dt>Qué apoyo ofrece</dt><dd>Vinculación del emprendimiento con desafíos públicos.</dd></div><div><dt>Qué necesitas para comenzar</dt><dd>Identifica el desafío municipal y el beneficio para sus usuarios.</dd></div><div><dt>Siguiente paso</dt><dd><a href="#mf-reto" data-build-reto>Preparar mi ficha de reto</a></dd></div></dl></article>
+      <article id="programa-vecino" class="prog p5 reveal"><div><span class="k" data-i18n="pr_5_k">Impacto</span><h3 data-i18n="pr_5_t">Vecino</h3><p data-i18n="pr_5_d">Emprendimiento social y ambiental con foco en la comunidad.</p></div><dl class="mf-details mf-details-light"><div><dt>Para quién es</dt><dd>Emprendimientos sociales o ambientales.</dd></div><div><dt>Qué apoyo ofrece</dt><dd>Desarrollo de iniciativas con impacto comunitario.</dd></div><div><dt>Qué necesitas para comenzar</dt><dd>Define la comunidad beneficiaria y el cambio que quieres medir.</dd></div><div><dt>Siguiente paso</dt><dd><a href="#mf-reto" data-build-reto>Preparar mi ficha de reto</a></dd></div></dl></article>
+      <article id="programa-fundadoras" class="prog p6 reveal"><div><span class="k" data-i18n="pr_6_k">Mujeres</span><h3 data-i18n="pr_6_t">Fundadoras</h3><p data-i18n="pr_6_d">Programa dedicado a startups lideradas por mujeres.</p></div><dl class="mf-details mf-details-light"><div><dt>Para quién es</dt><dd>Startups lideradas por mujeres.</dd></div><div><dt>Qué apoyo ofrece</dt><dd>Un programa de acompañamiento dedicado a sus proyectos.</dd></div><div><dt>Qué necesitas para comenzar</dt><dd>Resume el proyecto, el equipo fundador y el apoyo que necesitas.</dd></div><div><dt>Siguiente paso</dt><dd><a href="#mf-reto" data-build-reto>Preparar mi ficha de reto</a></dd></div></dl></article>
+    </div>
+  </div>
+</section>
+
+<!-- CAMPUS / QUÉ OBTIENES -->
+<section id="campus">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow" data-i18n="cm_eyebrow">El Campus</span><h2 data-i18n="cm_title">No es un coworking cualquiera.</h2></div>
+    <div class="benes">
+      <article class="bene reveal"><div class="ic">◆</div><h4 data-i18n="cm_1t">Contactos que abren puertas</h4><p data-i18n="cm_1d">Una de las comunidades más conectadas de Colombia: fondos, corporativos, autoridades y founders, en un solo lugar.</p></article>
+      <article class="bene reveal"><div class="ic">◆</div><h4 data-i18n="cm_2t">Rodeado de los mejores</h4><p data-i18n="cm_2d">Construye tu startup junto a decenas de equipos de frontera y emprendedores con experiencia.</p></article>
+      <article class="bene reveal"><div class="ic">◆</div><h4 data-i18n="cm_3t">Un espacio para conectar</h4><p data-i18n="cm_3d">Se propone definir un espacio de encuentro para emprendedores, universidades, empresas y ciudadanía. La sede se acordará con la Alcaldía.</p></article>
+      <article class="bene reveal"><div class="ic">◆</div><h4 data-i18n="cm_4t">Servicios que no encuentras en otro lado</h4><p data-i18n="cm_4d">Mentoría, acceso a inversión, apoyo legal y administrativo, y alianzas con marcas globales.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORIA -->
+<section class="bg-negro" id="historia">
+  <div class="container">
+    <div class="historia">
+      <div class="reveal"><span class="eyebrow" data-i18n="hi_eyebrow">La visión · Rionegro</span><h2 data-i18n="hi_title">Conectar el talento con las oportunidades.</h2><p data-i18n="hi_p1">Se propone un Hub que conecte los desafíos de Rionegro con las capacidades de sus emprendedores, empresas, universidades y comunidades.</p><p data-i18n="hi_p2">Su instalación partirá de un diagnóstico de la oferta existente, para complementar capacidades y construir programas junto a los actores del territorio.</p><p data-i18n="hi_p3"><strong style="color:#fff;">La innovación nace de la empatía. El Hub debe transformar esa escucha en proyectos, oportunidades y mejores servicios para las personas.</strong></p></div>
+      <div class="historia-visual reveal" aria-hidden="true"><div class="yr">R<span>+</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section id="partners">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow" data-i18n="pt_eyebrow">Ecosistema</span><h2 data-i18n="pt_title">Aliados presentes en el campus.</h2><p data-i18n="pt_lead">Tipos de aliados que el Hub busca articular. Logos de ejemplo para la maqueta.</p></div>
+    <div class="partners reveal">
+      <div class="partner" data-i18n="pt_1">Alcaldía</div>
+      <div class="partner" data-i18n="pt_2">Universidades</div>
+      <div class="partner" data-i18n="pt_3">Fondos VC</div>
+      <div class="partner" data-i18n="pt_4">Banca</div>
+      <div class="partner" data-i18n="pt_5">Corporativos</div>
+      <div class="partner" data-i18n="pt_6">Cooperación</div>
+      <div class="partner" data-i18n="pt_7">Cámaras</div>
+      <div class="partner" data-i18n="pt_8">Aceleradoras</div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTICIAS -->
+<section class="bg-crema" id="noticias">
+  <div class="container">
+    <div class="head-row reveal"><div><span class="eyebrow" data-i18n="no_eyebrow">Noticias</span><h2 data-i18n="no_title">Qué pasa en el Hub.</h2></div></div>
+    <div class="stories reveal">
+      <article class="story"><div class="story-img"></div><div class="story-body"><span class="date" data-i18n="no_soon">Próximamente</span><h4 data-i18n="no_1">Propuesta de un campus de innovación para Rionegro</h4></div></article>
+      <article class="story"><div class="story-img"></div><div class="story-body"><span class="date" data-i18n="no_soon2">Próximamente</span><h4 data-i18n="no_2">Diseño del programa Semilla para nuevos emprendimientos</h4></div></article>
+      <article class="story"><div class="story-img"></div><div class="story-body"><span class="date" data-i18n="no_soon3">Próximamente</span><h4 data-i18n="no_3">Una agenda compartida de innovación para el territorio</h4></div></article>
+    </div>
+    <p style="margin-top:1.5rem;color:var(--gris);font-size:var(--fs-300);" data-i18n="no_note">Contenido ilustrativo para la maqueta. Se reemplazará con noticias reales.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contacto">
+  <div class="container reveal">
+    <h2 data-i18n="c_title">Tu startup empieza en Rionegro.</h2>
+    <p data-i18n="c_p">Postula a uno de nuestros programas o escríbenos para ser parte del ecosistema.</p>
+    <a class="btn btn-primary" href="#mf-reto" style="background:var(--tinta);color:#fff;" data-i18n="c_btn">Postular al Hub →</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand"><img class="rn-official-logo" src="./logo-rionegro.png" alt="Logo oficial de la Alcaldía de Rionegro"> Hub <span class="mf">Rionegro</span></div>
+        <p style="color:rgba(255,255,255,.6);max-width:36ch;margin-top:1rem;" data-i18n="ft_tag">Propuesta de campus de innovación de Rionegro. Talento local conectado con oportunidades globales.</p>
+        <p style="color:rgba(255,255,255,.5);font-size:var(--fs-300);margin-top:.5rem;">Rionegro, Antioquia · Sede por definir</p>
+      </div>
+      <div class="footer-cols">
+        <div><h5 data-i18n="ft_h1">Explora</h5><ul><li><a href="#startups" data-i18n="nav_startups">Startups</a></li><li><a href="#programas" data-i18n="nav_programs">Programas</a></li><li><a href="#campus" data-i18n="nav_campus">El Campus</a></li></ul></div>
+        <div><h5 data-i18n="ft_h2">Hub</h5><ul><li><a href="#historia" data-i18n="nav_history">Visión</a></li><li><a href="#noticias" data-i18n="nav_news">Noticias</a></li><li><a href="#contacto" data-i18n="ft_join">Postular</a></li></ul></div>
+        <div><h5 data-i18n="ft_h3">Contacto</h5><ul><li><a href="#mf-reto">Preparar ficha de contacto</a></li><li data-i18n="ft_loc">Rionegro, Antioquia, Colombia</li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span data-i18n="ft_copy">© 2026 Hub Rionegro. Maqueta / versión beta.</span><span data-i18n="ft_insp">Inspirado en campus de innovación de referencia mundial.</span></div>
+  </div>
+</footer>
+
+<script>
+const I18N={
+  "es": {
+    "skip": "Saltar al contenido",
+    "nav_startups": "Startups",
+    "nav_programs": "Programas",
+    "nav_campus": "El Campus",
+    "nav_history": "Visión",
+    "nav_news": "Noticias",
+    "nav_cta": "Postular",
+    "h_eyebrow": "Rionegro · Antioquia · Colombia",
+    "h_title": "El campus de innovación <span class=\"accent\">de Rionegro</span>.",
+    "h_lead": "Una propuesta para conectar a los emprendedores de Rionegro con conocimiento, talento y oportunidades. De la idea al escalamiento, articulamos un ecosistema con vocación regional e internacional.",
+    "h_cta1": "Postula a un programa",
+    "h_cta2": "Conoce la visión",
+    "h_s1": "startups · meta ilustrativa",
+    "h_s2": "programas por desarrollar",
+    "h_s3": "aliados · meta ilustrativa",
+    "h_s4": "líneas articuladas",
+    "st_eyebrow": "Hecho en el Hub",
+    "st_title": "Startups que nacen acá.",
+    "st_cta": "Ver todas",
+    "st_note": "Startups de ejemplo para la maqueta. Se reemplazarán con las residentes reales del Hub.",
+    "st_1": "Fintech",
+    "st_2": "Movilidad",
+    "st_3": "Foodtech",
+    "st_4": "Turismo",
+    "st_5": "Cleantech",
+    "st_6": "Healthtech",
+    "st_7": "Edtech",
+    "st_8": "Proptech",
+    "st_9": "GovTech",
+    "st_10": "Agrotech",
+    "st_11": "Economía creativa",
+    "st_12": "Data / IA",
+    "pr_eyebrow": "Programas",
+    "pr_title": "Un programa para cada etapa.",
+    "pr_lead": "Del primer prototipo al escalamiento regional, el Hub ofrece rutas de acompañamiento junto a aliados de primer nivel.",
+    "pr_1_k": "Idea",
+    "pr_1_t": "Semilla",
+    "pr_1_d": "Preincubación para quienes recién empiezan: el primer paso para convertir una idea en un proyecto validado.",
+    "pr_2_k": "Tracción",
+    "pr_2_t": "Impulso",
+    "pr_2_d": "Aceleración para startups con producto y primeros clientes.",
+    "pr_3_k": "Escala",
+    "pr_3_t": "Global",
+    "pr_3_d": "Escalamiento regional para startups listas para cruzar fronteras.",
+    "pr_4_k": "GovTech",
+    "pr_4_t": "Municipio",
+    "pr_4_d": "Programa para soluciones que mejoran los servicios de la ciudad.",
+    "pr_5_k": "Impacto",
+    "pr_5_t": "Vecino",
+    "pr_5_d": "Emprendimiento social y ambiental con foco en la comunidad.",
+    "pr_6_k": "Mujeres",
+    "pr_6_t": "Fundadoras",
+    "pr_6_d": "Programa dedicado a startups lideradas por mujeres.",
+    "cm_eyebrow": "El Campus",
+    "cm_title": "No es un coworking cualquiera.",
+    "cm_1t": "Contactos que abren puertas",
+    "cm_1d": "Una de las comunidades más conectadas de Colombia: fondos, corporativos, autoridades y founders, en un solo lugar.",
+    "cm_2t": "Rodeado de los mejores",
+    "cm_2d": "Construye tu startup junto a decenas de equipos de frontera y emprendedores con experiencia.",
+    "cm_3t": "Un espacio para conectar",
+    "cm_3d": "Se propone definir un espacio de encuentro para emprendedores, universidades, empresas y ciudadanía. La sede se acordará con la Alcaldía.",
+    "cm_4t": "Servicios que no encuentras en otro lado",
+    "cm_4d": "Mentoría, acceso a inversión, apoyo legal y administrativo, y alianzas con marcas globales.",
+    "hi_eyebrow": "La visión · Rionegro",
+    "hi_title": "Conectar el talento con las oportunidades.",
+    "hi_p1": "Se propone un Hub que conecte los desafíos de Rionegro con las capacidades de sus emprendedores, empresas, universidades y comunidades.",
+    "hi_p2": "Su instalación partirá de un diagnóstico de la oferta existente, para complementar capacidades y construir programas junto a los actores del territorio.",
+    "hi_p3": "<strong style=\"color:#fff;\">La innovación nace de la empatía. El Hub debe transformar esa escucha en proyectos, oportunidades y mejores servicios para las personas.</strong>",
+    "pt_eyebrow": "Ecosistema",
+    "pt_title": "Aliados presentes en el campus.",
+    "pt_lead": "Tipos de aliados que el Hub busca articular. Logos de ejemplo para la maqueta.",
+    "pt_1": "Alcaldía",
+    "pt_2": "Universidades",
+    "pt_3": "Fondos VC",
+    "pt_4": "Banca",
+    "pt_5": "Corporativos",
+    "pt_6": "Cooperación",
+    "pt_7": "Cámaras",
+    "pt_8": "Aceleradoras",
+    "no_eyebrow": "Noticias",
+    "no_title": "Qué pasa en el Hub.",
+    "no_soon": "Próximamente",
+    "no_soon2": "Próximamente",
+    "no_soon3": "Próximamente",
+    "no_1": "Propuesta de un campus de innovación para Rionegro",
+    "no_2": "Diseño del programa Semilla para nuevos emprendimientos",
+    "no_3": "Una agenda compartida de innovación para el territorio",
+    "no_note": "Contenido ilustrativo para la maqueta. Se reemplazará con noticias reales.",
+    "c_title": "Tu startup empieza en Rionegro.",
+    "c_p": "Postula a uno de nuestros programas o escríbenos para ser parte del ecosistema.",
+    "c_btn": "Postular al Hub →",
+    "ft_tag": "Propuesta de campus de innovación de Rionegro. Talento local conectado con oportunidades globales.",
+    "ft_h1": "Explora",
+    "ft_h2": "Hub",
+    "ft_h3": "Contacto",
+    "ft_join": "Postular",
+    "ft_loc": "Rionegro, Antioquia, Colombia",
+    "ft_copy": "© 2026 Hub Rionegro. Maqueta / versión beta.",
+    "ft_insp": "Inspirado en campus de innovación de referencia mundial.",
+    "ct_d_addr": "Rionegro, Antioquia · Sede por definir",
+    "ct_d_tel": "Canal de contacto por definir",
+    "ct_phone": "Canal de contacto por definir",
+    "ct_send": "Preparar ficha de proyecto →"
+  },
+  "en": {
+    "skip": "Skip to content",
+    "nav_startups": "Startups",
+    "nav_programs": "Programs",
+    "nav_campus": "The Campus",
+    "nav_history": "Vision",
+    "nav_news": "News",
+    "nav_cta": "Apply",
+    "h_eyebrow": "Rionegro · Antioquia · Colombia",
+    "h_title": "The innovation campus <span class=\"accent\">of Rionegro</span>.",
+    "h_lead": "A proposal to connect local founders with knowledge, talent and opportunities, from the first idea to regional and international growth.",
+    "h_cta1": "Apply to a program",
+    "h_cta2": "Discover the vision",
+    "h_s1": "startups · illustrative target",
+    "h_s2": "programs to develop",
+    "h_s3": "partners · illustrative target",
+    "h_s4": "connected work streams",
+    "st_eyebrow": "Built at the Hub",
+    "st_title": "Startups born here.",
+    "st_cta": "View all",
+    "st_note": "Sample startups for the mockup. To be replaced with real residents.",
+    "st_1": "Fintech",
+    "st_2": "Mobility",
+    "st_3": "Foodtech",
+    "st_4": "Tourism",
+    "st_5": "Cleantech",
+    "st_6": "Healthtech",
+    "st_7": "Edtech",
+    "st_8": "Proptech",
+    "st_9": "GovTech",
+    "st_10": "Blue economy",
+    "st_11": "Creative economy",
+    "st_12": "Data / AI",
+    "pr_eyebrow": "Programs",
+    "pr_title": "A program for every stage.",
+    "pr_lead": "From first prototype to regional scale, the Hub offers support tracks alongside top-tier partners.",
+    "pr_1_k": "Idea",
+    "pr_1_t": "Semilla",
+    "pr_1_d": "Pre-incubation for new founders: a first step towards validating an idea.",
+    "pr_2_k": "Traction",
+    "pr_2_t": "Impulso",
+    "pr_2_d": "Acceleration for startups with product and first customers.",
+    "pr_3_k": "Scale",
+    "pr_3_t": "Global",
+    "pr_3_d": "Regional scaling for startups ready to cross borders.",
+    "pr_4_k": "GovTech",
+    "pr_4_t": "Municipio",
+    "pr_4_d": "A program for solutions that improve the city's services.",
+    "pr_5_k": "Impact",
+    "pr_5_t": "Vecino",
+    "pr_5_d": "Social and environmental entrepreneurship focused on the community.",
+    "pr_6_k": "Women",
+    "pr_6_t": "Fundadoras",
+    "pr_6_d": "A program dedicated to women-led startups.",
+    "cm_eyebrow": "The Campus",
+    "cm_title": "Not your average coworking.",
+    "cm_1t": "Contacts that open doors",
+    "cm_1d": "One of Colombia's most connected communities: funds, corporates, authorities and founders in one place.",
+    "cm_2t": "Surrounded by the best",
+    "cm_2d": "Build your startup alongside dozens of frontier teams and experienced founders.",
+    "cm_3t": "A place to connect",
+    "cm_3d": "A proposed meeting place for founders, universities, companies and residents. The location will be agreed with the city.",
+    "cm_4t": "Services you won't find elsewhere",
+    "cm_4d": "Mentorship, access to investment, legal and admin support, and alliances with global brands.",
+    "hi_eyebrow": "The vision · Rionegro",
+    "hi_title": "Connecting talent with opportunity.",
+    "hi_p1": "The proposed Hub connects city challenges with the capabilities of local founders, businesses, universities and communities.",
+    "hi_p2": "An initial assessment of existing services will guide complementary programs developed with local partners.",
+    "hi_p3": "Innovation starts with empathy. The Hub should turn listening into projects, opportunities and better public services.",
+    "pt_eyebrow": "Ecosystem",
+    "pt_title": "Partners present on campus.",
+    "pt_lead": "Types of partners the Hub seeks to bring together. Sample logos for the mockup.",
+    "pt_1": "Municipality",
+    "pt_2": "Universities",
+    "pt_3": "VC funds",
+    "pt_4": "Banking",
+    "pt_5": "Corporates",
+    "pt_6": "Cooperation",
+    "pt_7": "Chambers",
+    "pt_8": "Accelerators",
+    "no_eyebrow": "News",
+    "no_title": "What's happening at the Hub.",
+    "no_soon": "Coming soon",
+    "no_soon2": "Coming soon",
+    "no_soon3": "Coming soon",
+    "no_1": "A proposed innovation campus for Rionegro",
+    "no_2": "Designing the Semilla program for new founders",
+    "no_3": "A shared innovation agenda for the region",
+    "no_note": "Illustrative content for the mockup. To be replaced with real news.",
+    "c_title": "Your startup starts in Rionegro.",
+    "c_p": "Apply to one of our programs or write to us to join the ecosystem.",
+    "c_btn": "Apply to the Hub →",
+    "ft_tag": "A proposed innovation campus for Rionegro, connecting local talent with global opportunities.",
+    "ft_h1": "Explore",
+    "ft_h2": "Hub",
+    "ft_h3": "Contact",
+    "ft_join": "Apply",
+    "ft_loc": "Rionegro, Antioquia, Colombia",
+    "ft_copy": "© 2026 Hub Rionegro. Mockup / beta version.",
+    "ft_insp": "Inspired by world-class innovation campuses.",
+    "ct_d_addr": "Rionegro, Antioquia · Location to be agreed",
+    "ct_d_tel": "Contact channel to be agreed",
+    "ct_phone": "Contact channel to be agreed",
+    "ct_send": "Prepare project brief →"
+  }
+};
+(function(){
+  var toggle=document.querySelector('.menu-toggle');
+  var list=document.getElementById('nav-list');
+  function applyLang(lang){
+    document.documentElement.setAttribute('lang',lang);
+    document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');var v=I18N[lang][k];if(v===undefined)return;if(/<[a-z][\s\S]*>/i.test(v))el.innerHTML=v;else if(el.tagName==='META')el.setAttribute('content',v);else el.textContent=v;});
+    document.querySelectorAll('[data-lang-btn]').forEach(function(b){var a=b.getAttribute('data-lang-btn')===lang;b.classList.toggle('active',a);b.setAttribute('aria-pressed',a?'true':'false');});
+    try{localStorage.setItem('hm_lang',lang);}catch(e){}
+  }
+  document.querySelectorAll('[data-lang-btn]').forEach(function(b){b.addEventListener('click',function(){applyLang(b.getAttribute('data-lang-btn'));});});
+  var initLang='es';try{var s=localStorage.getItem('hm_lang');if(s&&I18N[s])initLang=s;}catch(e){}applyLang(initLang);
+  if(toggle&&list){toggle.addEventListener('click',function(){var open=list.classList.toggle('is-open');toggle.setAttribute('aria-expanded',open?'true':'false');});list.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){list.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');});});}
+  var prefersReduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reveals=document.querySelectorAll('.reveal');
+  if(prefersReduced||!('IntersectionObserver'in window)){reveals.forEach(function(el){el.classList.add('is-visible');});}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});reveals.forEach(function(el){io.observe(el);});}
+})();
+</script>
+<script>
+(function(){'use strict';
+const root=document.getElementById('mf-orientador'); if(!root)return;
+const line=root.dataset.line;
+const lines={lab:{name:'Lab Rionegro',repo:'lab-rionegro',color:'#07505F',why:'Tu necesidad se centra en comprender un problema, mejorar un servicio o fortalecer las capacidades de innovación municipal.',next:'Describe el problema, identifica el servicio o área involucrada y reúne ejemplos de lo que ocurre hoy.'},sandbox:{name:'Sandbox Rionegro',repo:'sandbox-rionegro',color:'#087F91',why:'Buscas probar una solución para un desafío del municipio con usuarios, un plazo acotado y resultados medibles.',next:'Prepara una ficha de la solución: problema, usuarios, evidencia disponible y qué necesitas validar.'},hub:{name:'Hub Rionegro',repo:'hub-rionegro',color:'#07505F',why:'Necesitas desarrollar un emprendimiento o proyecto con mentoría, capacidades, redes y aliados.',next:'Resume tu proyecto, su etapa actual y el apoyo concreto que necesitas para avanzar.'},invest:{name:'Invest Rionegro',repo:'invest-rionegro',color:'#07505F',why:'Tu objetivo requiere inversión, cooperación o conexiones estratégicas para desarrollar un proyecto en el municipio.',next:'Prepara una descripción del proyecto, sus actores, recursos y aportes esperados para Rionegro.'}};
+const roles=[['empresa','Empresa o startup'],['vecino','Vecino o vecina'],['universidad','Universidad o centro de investigación'],['estado','Alcaldía u otra institución pública'],['organizacion','Organización social o gremio']];
+const stages=[['problema','Tengo un problema o necesidad'],['idea','Tengo una idea'],['prototipo','Tengo un prototipo o solución para probar'],['operacion','Tengo un proyecto o solución funcionando']];
+const opt=(id,title,score={},detail='')=>({id,title,score,detail});
+const q=(id,title,options,help='Elige la opción que mejor describe tu necesidad actual.')=>({id,title,options,help});
+const profiles={empresa:['Mejorar un servicio con el municipio','Probar mi solución en el municipio','Desarrollar o hacer crecer mi emprendimiento','Invertir o impulsar un proyecto estratégico'],vecino:['Mejorar un trámite o servicio que utilizo','Participar en la prueba de una solución para el barrio','Desarrollar una iniciativa comunitaria','Impulsar un proyecto para el desarrollo del municipio'],universidad:['Investigar y co-diseñar una mejora de servicios','Validar una tecnología en un entorno real','Vincular talento y emprendimientos con el ecosistema','Articular investigación aplicada y cooperación'],estado:['Rediseñar un servicio o proceso público','Resolver un desafío con soluciones externas','Fortalecer el ecosistema emprendedor','Estructurar inversión o cooperación'],organizacion:['Mejorar un servicio para nuestra comunidad','Colaborar en una prueba para un problema colectivo','Fortalecer una iniciativa y encontrar aliados','Articular un proyecto de desarrollo territorial']};
+const programs={
+lab:{agil:{name:'Consultoría Ágil',why:'Necesitas abordar un desafío concreto y co-crear una mejora de servicio con el área responsable y sus usuarios.',next:'Identifica el área municipal responsable y describe el problema, las personas afectadas y la mejora esperada.',href:'#innovacion/servicios',selector:'[data-i18n="in_s_1t"]'},red:{name:'Red de Innovadores',why:'Buscas formar y conectar equipos municipales para aprender herramientas de innovación y compartir prácticas.',next:'Identifica a los funcionarios o al equipo municipal que participarían y las capacidades que necesitan fortalecer.',href:'#innovacion/servicios',selector:'[data-i18n="in_s_2t"]'},indice:{name:'Índice de Innovación',why:'Necesitas medir capacidades de innovación de las áreas municipales y priorizar dónde fortalecerlas.',next:'Define las áreas a evaluar y reúne información sobre sus capacidades y prácticas de innovación.',href:'#innovacion/servicios',selector:'[data-i18n="in_s_3t"]'}},
+hub:{cabina:{name:'Semilla',why:'Estás comenzando y necesitas convertir tu idea en un proyecto o primer prototipo.',next:'Resume la necesidad que resolverás, tus posibles usuarios y la idea que quieres validar.',href:'#programa-cabina'},malecon:{name:'Impulso',why:'Ya tienes producto y primeros clientes; necesitas acompañamiento para fortalecer la tracción.',next:'Reúne evidencia de uso, primeros clientes y los principales obstáculos para crecer.',href:'#programa-malecon'},pacifico:{name:'Global',why:'Tu emprendimiento tiene una base validada y busca crecer hacia otros mercados de la región.',next:'Describe tu tracción actual, los mercados objetivo y qué necesitas para expandirte.',href:'#programa-pacifico'},municipio:{name:'Municipio',why:'Tu proyecto se enfoca en mejorar servicios de la ciudad y necesita vincularse con desafíos públicos.',next:'Relaciona tu solución con un desafío municipal concreto y explica el beneficio para los usuarios.',href:'#programa-municipio'},vecino:{name:'Vecino',why:'Tu iniciativa busca impacto social o ambiental con foco en la comunidad.',next:'Describe la comunidad beneficiaria y cómo comprobarás el impacto social o ambiental.',href:'#programa-vecino'},fundadoras:{name:'Fundadoras',why:'Has indicado interés en acompañamiento para una startup liderada por mujeres.',next:'Resume el proyecto, su equipo fundador y el apoyo que necesita en su etapa actual.',href:'#programa-fundadoras'}},
+invest:{informacion:{name:'Información estratégica',why:'Necesitas conocer sectores, oportunidades y condiciones para tomar una decisión de inversión.',next:'Define el sector y las preguntas que necesitas responder antes de invertir.',href:'#invertir/servicios',selector:'[data-i18n="iv_sv_1t"]'},tramites:{name:'Facilitación de trámites',why:'Tu proyecto requiere orientación y coordinación para avanzar en su instalación.',next:'Prepara una ficha del proyecto y enumera los trámites y áreas con los que necesitas coordinar.',href:'#invertir/servicios',selector:'[data-i18n="iv_sv_2t"]'},aliados:{name:'Conexión con aliados',why:'Buscas socios, talento o instituciones que contribuyan al desarrollo de tu inversión.',next:'Define el tipo de aliado y el aporte concreto que buscas para el proyecto.',href:'#invertir/servicios',selector:'[data-i18n="iv_sv_3t"]'},aftercare:{name:'Aftercare',why:'Ya operas en el municipio y necesitas acompañamiento para consolidar o ampliar tu inversión.',next:'Describe tu operación actual, el plan de crecimiento y las dificultades que necesitas abordar.',href:'#invertir/servicios',selector:'[data-i18n="iv_sv_4t"]'},cooperacion:{name:'Cooperación',why:'Tu proyecto requiere colaboración institucional, conocimiento o recursos de cooperación.',next:'Define el desafío, las instituciones involucradas y qué aportaría cada parte.',href:'#cooperacion/lineas'},redes:{name:'Relacionamiento y redes',why:'Quieres conectar al municipio o tu institución con redes, intercambios y alianzas internacionales.',next:'Identifica el propósito del vínculo, los actores y el aprendizaje o colaboración que buscas.',href:'#cooperacion/redes'}},
+sandbox:{postulacion:{name:'Ruta de postulación',why:'Tienes una solución para explorar su prueba en un entorno municipal acotado.',next:'Prepara una ficha con el problema, solución, usuarios, lugar, duración y resultados a medir.',href:'#como-funciona'},preparacion:{name:'Preparación para experimentar',why:'Antes de una prueba necesitas delimitar el desafío y preparar evidencia o un prototipo.',next:'Acota el problema y lo que necesitas validar. Si buscas co-diseño, comienza con Lab; si necesitas desarrollar tu emprendimiento, explora Hub.',href:'#como-funciona'},participacion:{name:'Participación vecinal',why:'Quieres aportar experiencia como usuario y contribuir a evaluar soluciones para el municipio.',next:'Identifica el problema o ámbito que te interesa y qué experiencia puedes aportar.',href:'#participantes'},academia:{name:'Colaboración académica',why:'Buscas aportar investigación, evaluación o conocimiento a la experimentación.',next:'Describe tus capacidades de investigación y la evidencia que podrías ayudar a generar.',href:'#participantes'},municipal:{name:'Articulación municipal',why:'Necesitas definir un desafío, coordinar al área responsable y evaluar condiciones para una prueba.',next:'Identifica el área responsable, el problema y los indicadores que permitirían evaluar una solución.',href:'#como-funciona'}}};
+let inherited={};try{const u=new URLSearchParams(location.search);const role=u.get('mf_rol'),stage=u.get('mf_etapa');if(roles.some(x=>x[0]===role))inherited.role=role;if(stages.some(x=>x[0]===stage))inherited.stage=stage;}catch(e){}
+let answers={},step=0; let seq=[];
+function roleQuestion(){return q('role','¿Desde qué rol participas?',roles.map(x=>opt(x[0],x[1])), 'Tu rol nos ayuda a adaptar las preguntas; la recomendación depende de tu necesidad.');}
+function questions(){
+if(line==='main')return [roleQuestion(),q('goal','¿Qué quieres lograr?',(profiles[answers.role]||profiles.estado).map((s,i)=>opt(['lab','sandbox','hub','invest'][i],s,{[['lab','sandbox','hub','invest'][i]]:6}))),q('stage','¿En qué etapa estás?',stages.map(x=>opt(x[0],x[1]))),q('support','¿Qué necesitas primero?',[opt('diagnostico','Entender el problema y diseñar una mejora',{lab:7}),opt('piloto','Probar una solución con usuarios reales',{sandbox:7}),opt('capacidades','Mentoría, capacidades y redes para mi proyecto',{hub:7}),opt('recursos','Inversión, cooperación o aliados estratégicos',{invest:7}),opt('duda','Todavía no lo tengo claro',{})])];
+let out=[];if(!inherited.role)out.push(roleQuestion());
+if(line==='lab')out.push(q('purpose','¿Qué necesitas del Lab?',[opt('agil','Resolver un problema de servicio o proceso',{agil:6}),opt('red','Formar y conectar equipos municipales',{red:6}),opt('indice','Medir capacidades de innovación',{indice:6})]),q('work','¿Qué apoyo te ayudaría más?',[opt('agil','Investigar con usuarios y co-diseñar una solución',{agil:4}),opt('red','Aprender herramientas y compartir prácticas',{red:4}),opt('indice','Contar con un diagnóstico y seguimiento de capacidades',{indice:4})]),q('result','¿Qué resultado necesitas priorizar?',[opt('agil','Una mejora concreta para las personas',{agil:5}),opt('red','Un equipo con más capacidades y colaboración',{red:5}),opt('indice','Evidencia para priorizar mejoras institucionales',{indice:5})]));
+if(line==='hub'){
+if(!inherited.stage)out.push(q('stage','¿En qué etapa está tu proyecto?',[opt('idea','Idea o primer prototipo'),opt('prototipo','Producto, todavía sin primeros clientes'),opt('operacion','Producto con primeros clientes'),opt('escala','Proyecto validado listo para expandirse')]));
+out.push(q('focus','¿Cuál es el foco de tu proyecto?',[opt('general','Emprendimiento o negocio'),opt('publico','Mejorar servicios de la ciudad',{municipio:10}),opt('social','Impacto social o ambiental en la comunidad',{vecino:10})]),q('support','¿Qué apoyo necesitas ahora?',[opt('validar','Validar la idea y construir un primer prototipo',{cabina:8}),opt('traccion','Fortalecer producto, ventas y primeros clientes',{malecon:8}),opt('expansion','Expandirme a otros mercados de la región',{pacifico:8}),opt('publico','Conectarme con desafíos y actores municipales',{municipio:8}),opt('social','Desarrollar un modelo de impacto comunitario',{vecino:8})]),q('women','¿Te interesa el programa para startups lideradas por mujeres?',[opt('si','Sí, nuestro proyecto cumple ese perfil',{fundadoras:22}),opt('no','No aplica a mi proyecto'),opt('prefiero','Prefiero continuar con la orientación general')], 'Esta respuesta es opcional: también puedes continuar con la orientación general.'));
+}
+if(line==='invest')out.push(q('purpose','¿Qué buscas impulsar?',[opt('inversion','Una inversión o instalación empresarial',{informacion:3,tramites:2}),opt('cooperacion','Un proyecto de cooperación institucional',{cooperacion:10}),opt('redes','Una alianza, intercambio o red internacional',{redes:10}),opt('crecer','La expansión de una empresa ya instalada',{aftercare:10})]),q('support','¿Qué necesitas para avanzar?',[opt('informacion','Información sobre oportunidades y sectores',{informacion:8}),opt('tramites','Orientación y coordinación de trámites',{tramites:8}),opt('aliados','Conectar con socios, talento o instituciones',{aliados:8}),opt('cooperacion','Articular cooperación y aportes institucionales',{cooperacion:8}),opt('redes','Conectar con redes e intercambios internacionales',{redes:8}),opt('aftercare','Acompañamiento para consolidar mi inversión',{aftercare:8})]),q('result','¿Cuál es tu siguiente hito?',[opt('decidir','Decidir si invertir y dónde',{informacion:5}),opt('instalar','Avanzar en la instalación del proyecto',{tramites:5}),opt('socios','Concretar una colaboración con aliados',{aliados:5,cooperacion:2}),opt('acuerdo','Estructurar un proyecto de cooperación',{cooperacion:5}),opt('red','Establecer una conexión internacional',{redes:5}),opt('expandir','Ampliar una operación existente',{aftercare:5})]));
+if(line==='sandbox')out.push(q('purpose','¿Cómo quieres participar?',[opt('postulacion','Proponer una solución para probar',{postulacion:8}),opt('participacion','Aportar como vecino o usuario',{participacion:12}),opt('academia','Investigar o evaluar una prueba',{academia:12}),opt('municipal','Impulsar un desafío desde una institución pública',{municipal:12})]),q('ready','¿Qué tienes disponible hoy?',[opt('idea','Una necesidad o idea sin prototipo',{preparacion:5}),opt('prototipo','Un prototipo o solución para validar',{postulacion:3}),opt('experiencia','Experiencia ciudadana o conocimiento del problema',{participacion:3}),opt('investigacion','Un equipo y capacidades de investigación',{academia:3}),opt('equipo','Un área responsable y un desafío definido',{municipal:3})]),q('theme','¿En qué ámbito se ubica el reto?',['Movilidad urbana','Turismo y economía nocturna','Comercio y gastronomía','Sostenibilidad','GovTech y trámites','Espacio público inteligente','Otro / aún por definir'].map((s,i)=>opt(String(i),s)), 'El ámbito ayuda a delimitar la propuesta; no determina su admisión.'));
+return out;}
+function esc(t){return String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function render(focus=false){seq=questions(); const n=seq[step];const prefix=line==='main'?'Nivel 1 · Encuentra tu línea':'Nivel 2 · '+lines[line].name;const title=line==='main'?'¿Qué necesitas resolver en Rionegro?':line==='hub'?'Encuentra tu programa':line==='lab'?'Encuentra el servicio que necesitas':'Encuentra tu ruta de colaboración';
+root.style.setProperty('--guide-color',line==='main'?'#07505F':lines[line].color);
+root.innerHTML='<div class="mf-guide-shell"><div class="mf-guide-head"><span class="mf-guide-tag">'+prefix+'</span><h2>'+title+'</h2><p>'+(line==='main'?'Cuéntanos quién eres, qué buscas y dónde estás. Te orientamos sobre cómo avanzar.':'Responde unas preguntas para identificar el apoyo que mejor se adapta a tu necesidad.')+'</p></div><div class="mf-guide-body" id="mf-guide-content"></div></div>';
+const body=root.querySelector('.mf-guide-body');
+if(line!=='main'&&inherited.role){body.innerHTML='<div class="mf-guide-context"><span>Tu perfil: <strong>'+esc(roles.find(x=>x[0]===inherited.role)[1])+'</strong>'+(inherited.stage?' · '+esc(stages.find(x=>x[0]===inherited.stage)[1]):'')+'</span><button class="mf-guide-link" type="button" data-edit>Editar perfil</button></div>';body.querySelector('[data-edit]').onclick=()=>{inherited={};answers={};step=0;render(true);};}
+if(step>=seq.length){result(body);return;}
+body.insertAdjacentHTML('beforeend','<div class="mf-guide-progress"><span>Pregunta '+(step+1)+' de '+seq.length+'</span><div class="mf-guide-track" aria-hidden="true"><div class="mf-guide-fill" style="width:'+((step+1)/seq.length*100)+'%"></div></div></div><fieldset><legend tabindex="-1">'+esc(n.title)+'</legend><p class="mf-guide-help">'+esc(n.help)+'</p><div class="mf-guide-options">'+n.options.map(o=>'<label class="mf-guide-option"><input type="radio" name="mf-answer" value="'+esc(o.id)+'" '+(answers[n.id]===o.id?'checked':'')+'><span><strong>'+esc(o.title)+'</strong>'+(o.detail?'<small>'+esc(o.detail)+'</small>':'')+'</span></label>').join('')+'</div></fieldset><div class="mf-guide-actions"><button type="button" class="mf-guide-button secondary" data-back '+(step===0?'disabled':'')+'>Anterior</button><button type="button" class="mf-guide-button" data-next '+(answers[n.id]===undefined?'disabled':'')+'>'+(step===seq.length-1?'Ver mi orientación':'Continuar')+'</button></div>');
+body.querySelectorAll('input').forEach(input=>input.onchange=()=>{if(n.id==='role'&&answers.role!==input.value){answers={role:input.value};}else answers[n.id]=input.value;body.querySelector('[data-next]').disabled=false;});
+body.querySelector('[data-next]').onclick=()=>{step++;render(true);};body.querySelector('[data-back]').onclick=()=>{step--;render(true);};if(focus)body.querySelector('legend').focus({preventScroll:true});}
+function rank(){const pool=line==='main'?lines:programs[line];const scores=Object.fromEntries(Object.keys(pool).map(k=>[k,0]));questions().forEach(n=>{const o=n.options.find(o=>o.id===answers[n.id]);if(o)Object.entries(o.score).forEach(([k,v])=>{scores[k]=(scores[k]||0)+v;});});
+const stage=answers.stage||inherited.stage;if(line==='hub'){scores[stage==='escala'?'pacifico':stage==='operacion'?'malecon':'cabina']+=6;if(stage!=='operacion'&&stage!=='escala')scores.pacifico=-1;if(stage==='problema'||stage==='idea')scores.malecon=-1;}
+if(line==='sandbox'&&answers.purpose==='postulacion'&&answers.ready==='idea'){scores.preparacion=30;scores.postulacion=0;}
+return Object.keys(pool).sort((a,b)=>scores[b]-scores[a]).map(k=>({key:k,score:scores[k],...pool[k]}));}
+function target(item){if(line==='main'){let p=new URLSearchParams();p.set('mf_rol',answers.role);p.set('mf_etapa',answers.stage);return './'+item.key+'.html?'+p.toString()+(item.key==='lab'||item.key==='invest'?'#inicio/mf-orientador':'#mf-orientador');}return item.href;}
+function result(body){const ranked=rank(),best=ranked[0],alt=ranked[1];const tied=alt&&alt.score===best.score;const role=answers.role||inherited.role;const isMunicipal=line==='lab'&&best.key!=='agil'&&role!=='estado';
+let why=best.why;if(tied)why+=' Tus respuestas combinan dos necesidades: también conviene revisar la alternativa indicada abajo.';
+let next=best.next;if(isMunicipal)next+=' Este servicio está orientado a equipos municipales: tu participación requiere articularte con un área del municipio.';
+if(line==='hub'&&best.key==='pacifico'&&answers.stage!=='escala'&&inherited.stage!=='operacion')next+=' Antes de expandirte, confirma que cuentas con producto validado y tracción suficiente.';
+const label=line==='main'?'Tu punto de partida':line==='hub'?'Programa recomendado':line==='lab'?'Servicio recomendado':'Ruta recomendada';
+body.insertAdjacentHTML('beforeend','<div class="mf-guide-result"><span class="mf-guide-label">'+label+'</span><h3 tabindex="-1">'+esc(best.name)+'</h3><p>'+esc(why)+'</p><div class="mf-guide-summary"><strong>Tu siguiente paso</strong><p style="margin:8px 0 0">'+esc(next)+'</p></div><details><summary>¿En qué se basa esta orientación?</summary><ul>'+questions().filter(n=>answers[n.id]!==undefined).map(n=>'<li>'+esc(n.title)+' <strong>'+esc(n.options.find(o=>o.id===answers[n.id]).title)+'</strong></li>').join('')+'</ul></details><div class="mf-guide-actions"><a class="mf-guide-button" data-primary href="'+esc(target(best))+'">'+(line==='main'?'Explorar esta línea':'Conocer esta opción')+'</a><button class="mf-guide-button secondary" type="button" data-change>Cambiar respuestas</button></div>'+(alt&&alt.score>0?'<div class="mf-guide-alt"><strong>'+(tied?'También encaja con tu caso':'Opción complementaria')+': '+esc(alt.name)+'</strong><p>'+esc(alt.why)+'</p><a class="mf-guide-link" data-alt href="'+esc(target(alt))+'">Explorar '+esc(alt.name)+'</a></div>':'')+'<p class="mf-guide-note">Orientación inicial basada en la propuesta del sitio. No equivale a admisión ni confirma convocatorias abiertas.'+(line==='sandbox'?' La viabilidad de una prueba y cualquier condición regulatoria requieren evaluación de las autoridades competentes.':'')+'</p></div>');
+const retoAnchor=(line==='lab'||line==='invest')?'#inicio/mf-reto':'#mf-reto';body.querySelector('.mf-guide-actions').insertAdjacentHTML('beforeend','<a class="mf-guide-button secondary" data-build-reto href="'+retoAnchor+'">Construir mi reto</a>');window.dispatchEvent(new CustomEvent('mf:recommendation',{detail:{line:line==='main'?best.key:line,program:line==='main'?'':best.name,next:next,role:role||'',stage:answers.stage||inherited.stage||''}}));body.querySelector('[data-change]').onclick=()=>{step=0;render(true);};
+if(line!=='main'){[[body.querySelector('[data-primary]'),best],[body.querySelector('[data-alt]'),alt]].forEach(([a,item])=>{if(!a||!item)return;a.addEventListener('click',()=>{document.querySelectorAll('.mf-guide-highlight').forEach(x=>x.classList.remove('mf-guide-highlight'));setTimeout(()=>{let el=item.selector?document.querySelector(item.selector):document.getElementById(item.href.slice(1));if(el){const card=el.closest('article')||el;card.classList.add('mf-guide-highlight');card.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'center'});}},140);});});}
+body.querySelector('h3').focus({preventScroll:true});}
+render();
+})();
+</script>
+<script>
+(function(){'use strict';
+const box=document.getElementById('mf-reto');if(!box)return;
+const names={lab:'Lab Rionegro',sandbox:'Sandbox Rionegro',hub:'Hub Rionegro',invest:'Invest Rionegro'};
+const roleNames={empresa:'Empresa o startup',vecino:'Vecino o vecina',universidad:'Universidad o centro de investigación',estado:'Alcaldía u otra institución pública',organizacion:'Organización social o gremio'};
+const keys=['title','problem','people','attempts','change','resources'];const headings={problem:'Problema a resolver',people:'Personas afectadas',attempts:'Acciones y aprendizajes previos',change:'Cambio esperado',resources:'Recursos y aliados'};
+const key='mf_reto_v1',recKey='mf_orientacion_v1';let draft={},rec={};let available=true;
+try{draft=JSON.parse(localStorage.getItem(key)||'{}')||{};rec=JSON.parse(localStorage.getItem(recKey)||'{}')||{};}catch(e){draft={};rec={};available=false;}
+keys.forEach(k=>{if(typeof draft[k]!=='string')draft[k]='';draft[k]=draft[k].slice(0,k==='title'?150:3000);document.getElementById('mf-'+k).value=draft[k];});
+const current=document.getElementById('mf-orientador').dataset.line;
+if(!names[draft.line])draft.line=names[rec.line]?rec.line:(names[current]?current:'');
+const selection=document.getElementById('mf-draft-line');selection.value=draft.line;
+function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function save(){try{localStorage.setItem(key,JSON.stringify(draft));available=true;}catch(e){available=false;}document.getElementById('mf-builder-status').textContent=available?'Borrador guardado en este navegador.':'El navegador no permite guardar el borrador. Puedes descargar tu ficha.';}
+function route(){return rec.line===draft.line&&rec.program?rec.program:'Programa o servicio por definir';}
+function preparation(){return rec.line===draft.line&&rec.next?rec.next:'Identifica el área o actor con el que necesitas conversar y reúne la información disponible sobre el problema.';}
+function htmlBody(empty=true){let h='<span style="font-size:13px;font-weight:700;letter-spacing:.06em;color:#52675c">RIONEGRO · FICHA DE RETO</span><h3>'+esc(draft.title||'Mi reto para Rionegro')+'</h3><h4>Orientación elegida</h4><p>'+esc(names[draft.line]||'Línea por definir')+'<br>'+esc(route())+'</p>';
+if(roleNames[rec.role])h+='<p>Perfil: '+esc(roleNames[rec.role])+'</p>';
+for(const k of keys.slice(1))h+='<h4>'+headings[k]+'</h4><p'+(!draft[k].trim()?' class="empty"':'')+'>'+esc(draft[k].trim()|| (empty?'Completa esta respuesta para preparar tu ficha.':'Pendiente de completar.'))+'</p>';
+h+='<h4>Pasos de preparación</h4><p>'+esc(preparation())+'</p><ul><li>Revisa qué información o evidencia te falta reunir.</li><li>Confirma la disponibilidad y las condiciones de la opción elegida con el equipo responsable.</li></ul><p style="font-size:13px;color:#52675c">Orientación inicial basada en la propuesta del sitio. Esta ficha no constituye una postulación ni confirma admisión o convocatorias abiertas.</p>';return h;}
+function update(){document.getElementById('mf-preview').innerHTML=htmlBody();const ready=['problem','people','change'].every(k=>draft[k].trim().length>0);document.getElementById('mf-download').disabled=!ready;document.getElementById('mf-download-text').disabled=!ready;}
+document.getElementById('mf-builder-form').addEventListener('input',e=>{if(!keys.includes(e.target.name))return;draft[e.target.name]=e.target.value;update();save();});
+selection.addEventListener('change',()=>{draft.line=selection.value;update();save();});
+window.addEventListener('mf:recommendation',e=>{rec=e.detail;draft.line=rec.line;selection.value=draft.line;try{localStorage.setItem(recKey,JSON.stringify(rec));}catch(e){}update();save();});
+function download(text,type,ext){const blob=new Blob([text],{type});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='reto-rionegro.'+ext;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);document.getElementById('mf-builder-status').textContent='Ficha descargada. Tu borrador sigue disponible en este navegador.';}
+document.getElementById('mf-download').onclick=()=>{const documentText='<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(draft.title||'Ficha de reto · Rionegro')+'</title><style>body{font:16px/1.65 system-ui,sans-serif;color:#163D46;max-width:800px;padding:36px;margin:auto}h3{font-size:30px;line-height:1.2}h4{font-size:16px;margin:24px 0 6px}p{white-space:pre-wrap;overflow-wrap:anywhere;margin:0 0 12px}header{border-bottom:3px solid #07505F;padding-bottom:18px;margin-bottom:24px}button{padding:12px 20px;background:#07505F;color:white;border:0;border-radius:99px;font:inherit;cursor:pointer}footer{font-size:13px;color:#52675c;border-top:1px solid #cddbd3;padding-top:16px;margin-top:28px}@media print{body{padding:0;max-width:none;font-size:11pt}h4{break-after:avoid}p{orphans:3;widows:3}.no-print{display:none}}</style><style>.rn-official-logo{display:block;width:170px;height:auto;max-height:52px;object-fit:contain;background:#fff;border-radius:5px;padding:5px;flex-shrink:0}.brand{gap:14px}.brand b{font-size:1rem}.rn-proposal{background:#EDF8FA;color:#07505F;border-bottom:1px solid #C9E6EB;padding:8px 20px;text-align:center;font:600 12px/1.5 Manrope,system-ui,sans-serif}.rn-proposal a{color:inherit;text-decoration:underline}.rn-home{display:inline-block;margin:10px 0;color:inherit;text-decoration:underline}.footer-brand{flex-wrap:wrap}.reveal{opacity:1;transform:none}@media(max-width:650px){.rn-official-logo{width:118px;max-height:43px}.brand b{font-size:.85rem}.brand small{font-size:.63rem}.nav{gap:10px}.rn-proposal{font-size:11px;padding:7px 12px}}@media print{.rn-proposal{display:block}.rn-official-logo{width:150px}}</style><\/head><body><header><strong>Ficha de reto · Rionegro</strong><p>Preparada el '+new Date().toLocaleDateString('es-CO')+'</p></header>'+htmlBody(false)+'<footer>Documento de trabajo · Rionegro, Ciudad del Bienestar · Innovación al servicio de las personas y sus familias.</footer><\/body><\/html>';download(documentText,'text/html;charset=utf-8','html');};
+document.getElementById('mf-download-text').onclick=()=>{let t='RIONEGRO · FICHA DE RETO\n'+(draft.title||'Mi reto para Rionegro')+'\n\nOrientación elegida: '+(names[draft.line]||'Línea por definir')+'\n'+route()+'\n';for(const k of keys.slice(1))t+='\n'+headings[k]+'\n'+(draft[k].trim()||'Pendiente de completar.')+'\n';t+='\nPasos de preparación\n'+preparation()+'\nReúne la evidencia disponible y confirma las condiciones con el equipo responsable.\n\nEsta ficha no constituye una postulación ni confirma admisión o convocatorias abiertas.\n';download('\ufeff'+t,'text/plain;charset=utf-8','txt');};
+document.getElementById('mf-clear').onclick=()=>{keys.forEach(k=>{draft[k]='';document.getElementById('mf-'+k).value='';});update();save();document.getElementById('mf-builder-status').textContent='Respuestas del borrador borradas.';};
+function openBuilder(){document.getElementById('mf-builder-open').open=true;}
+document.addEventListener('click',e=>{if(e.target.closest('[data-build-reto]')){openBuilder();setTimeout(()=>box.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'}),90);}});
+if(location.hash.endsWith('mf-reto'))openBuilder();window.addEventListener('hashchange',()=>{if(location.hash.endsWith('mf-reto'))openBuilder();});update();
+})();
+</script>
+
+<script>(function(){const header=document.querySelector('.site-header'),bar=document.querySelector('.registro-bar');function offsets(){const h=header?header.getBoundingClientRect().height:0;document.documentElement.style.setProperty('--mf-header-height',h+'px');document.documentElement.style.setProperty('--mf-anchor-offset',(h+(bar?bar.getBoundingClientRect().height:0)+20)+'px');}offsets();if('ResizeObserver' in window){const observer=new ResizeObserver(offsets);if(header)observer.observe(header);if(bar)observer.observe(bar);}else window.addEventListener('resize',offsets);})();</script>
+<div style="padding:12px;text-align:center;font:12px system-ui;background:#f6f6f3;color:#555">Logo institucional: <a href="https://rionegro.gov.co/" target="_blank" rel="noopener">Alcaldía de Rionegro</a> · Propuesta de trabajo, sujeta a validación.</div></body>
+</html>
+
